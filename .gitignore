@@ -1,0 +1,5 @@
+*node_modules/*
+/nuxt-vue-2/node_modules/
+/nuxt-vue-2/.nuxt/
+/nuxt-vue-2/.idea
+*.idea/*
