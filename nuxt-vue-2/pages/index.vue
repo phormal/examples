@@ -1,17 +1,17 @@
 <template>
-	<div>
-		<PhormalContent />
-	</div>
+  <div>
+    <PhormalContent/>
+  </div>
 </template>
 
 <script>
 import PhormalContent from '~/components/PhormalContent';
 
 export default {
-	name: 'Index',
+  name: 'Index',
 
-	components: {
-		PhormalContent,
-	}
+  components: {
+    PhormalContent,
+  }
 };
 </script>
