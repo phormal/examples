@@ -3,6 +3,16 @@ import {ref, onMounted} from "vue";
 import {Phormal, useLength, useEmail, useRequired} from "@phormal/core";
 
 const formFields = {
+  paymentMethod: {
+    type: 'radiogroup',
+    label: 'Payment Method',
+    value: 'paypal',
+    options: [
+      {label: 'PayPal', value: 'paypal'},
+      {label: 'Credit card', value: 'creditcard'},
+      {label: 'Klarna', value: 'klarna'},
+    ]
+  },
   name: {
     label: 'Name',
     hooks: [useRequired(), useLength(3)]
@@ -16,14 +26,6 @@ const formFields = {
     label: 'Newsletter',
     value: true
   },
-  deliveryMethod: {
-    type: 'radiogroup',
-    options: [
-      {label: 'PayPal', value: 'paypal'},
-      {label: 'Credit card', value: 'creditcard'},
-      {label: 'Klarna', value: 'klarna'},
-    ]
-  }
 }
 
 const formConfig = {
@@ -48,10 +50,4 @@ onMounted(() => {
 
 <style>
 @import '@phormal/theme-basic/dist/index.css';
-
-#phormal {
-  margin: 0 auto;
-  width: 100%;
-  max-width: 600px;
-}
 </style>

@@ -11,6 +11,16 @@ export default {
   data() {
     return {
       formFields: {
+        paymentMethod: {
+          type: 'radiogroup',
+          label: 'Payment Method',
+          value: 'paypal',
+          options: [
+            {label: 'PayPal', value: 'paypal'},
+            {label: 'Credit card', value: 'creditcard'},
+            {label: 'Klarna', value: 'klarna'},
+          ]
+        },
         name: {
           label: 'Name',
           hooks: [useRequired(), useLength(3)]
@@ -24,14 +34,6 @@ export default {
           label: 'Newsletter',
           value: true
         },
-        deliveryMethod: {
-          type: 'radiogroup',
-          options: [
-            {label: 'PayPal', value: 'paypal'},
-            {label: 'Credit card', value: 'creditcard'},
-            {label: 'Klarna', value: 'klarna'},
-          ]
-        }
       },
       formConfig: {
         theme: 'basic',
